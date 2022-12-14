@@ -1,0 +1,28 @@
+.body {
+  padding-left: var(--page-padding-left);
+  padding-right: var(--page-padding-right);
+}
+
+.top-cards-heading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 2vh; */
+}
+
+.top-cards-heading div {
+    background-color: aqua;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.top-cards-heading div img {
+    aspect-ratio: 1;
+    height: 8vh;
+}
+
+.top-cards-container {
+  height: min(25vw);
+}

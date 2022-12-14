@@ -4,7 +4,7 @@
   flex-direction: row;
   padding-left: var(--page-padding-left);
   padding-right: var(--page-padding-right);
-  background-color: var(--background);
+  background-color: #fff4ff;
   min-height: 80vh;
 }
 
@@ -44,7 +44,7 @@
   font-size: 2rem;
   font-weight: 500;
   color: var(--text-secondary);
-  padding: 0.5ch 2ch;
+  padding: 0.3ch 2ch;
   border-radius: 2rem;
   letter-spacing: 0.09ch;
   background-size: 300% 100%;
