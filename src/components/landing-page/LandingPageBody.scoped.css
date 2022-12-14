@@ -28,12 +28,13 @@
 .top-card {
   background-color: var(--background);
   box-shadow: 0px 0px 15px -8px var(--text-primary);
-  width: 23%;
+  width: 25%;
   height: 33vh;
   border-radius: 1rem;
   transition: 200ms ease-in-out;
   position: relative;
   z-index: 1;
+  color: var(--text-primary);
 }
 
 .top-card:hover {
@@ -45,17 +46,40 @@
   position: absolute;
   z-index: -2;
   height: 80%;
-  transform: translate(-10%,-25%);
+  transform: translate(-3%,-25%);
 }
 #top-card2 img {
   position: absolute;
   z-index: -2;
-  height: 90%;
-  transform: translate(5%,-25%);
+  height: 80%;
+  transform: translate(16%,-25%);
 }
 #top-card3 img {
   position: absolute;
   z-index: -2;
-  height: 90%;
-  transform: translate(3.3%,-28%);
+  height: 80%;
+  transform: translate(5%,-28%);
+}
+
+.top-card-top{
+  height: 50%;
+}
+
+.top-card-bottom{
+  margin-top: 1ch;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 0 1vw;
+  overflow: hidden;
+}
+
+.top-card-bottom h4{
+  margin:1vh 0;
+}
+
+.top-card-bottom p{
+  margin: 0;
+  opacity: 60%;
 }
