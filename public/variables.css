@@ -1,8 +1,13 @@
 :root{
     --primary: #ff781f;
     --secondary: #ffcd02;
+    --background: #fff4ff;
     --text-primary: #1f1925;
     --text-secondary: #ffffff;
+    --primary-gradient-1: #f2c100;
+    --primary-gradient-2:  #ff781f;
+
     --page-padding-left: 8vw;
     --page-padding-right: 8vw;
+
 }

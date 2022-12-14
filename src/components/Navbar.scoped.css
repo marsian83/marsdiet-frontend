@@ -1,7 +1,10 @@
-.navbar {
-  /* FONT */
-  font-family: "Montserrat";
+:root{
+    font-family: "Montserrat";
+}
 
+.navbar {
+  z-index: 10;
+  position: sticky;
   padding-top: 2vh;
   padding-bottom: 2vh;
   padding-left: var(--page-padding-left);
@@ -14,7 +17,7 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.container:hover {
+.navbar:hover {
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -89,7 +92,7 @@
     border-radius:2rem;
     letter-spacing: 0.09ch;
     background-size: 300% 100%;
-    background-image: linear-gradient(to right,var(--secondary),var(--primary), var(--primary), var(--secondary));
+    background-image: linear-gradient(to right,var(--primary-gradient-1),var(--primary-gradient-2), var(--primary-gradient-2), var(--primary-gradient-1));
     /* box-shadow: 0 0px 8px 0 rgba(229, 66, 10, 0.75); */
     -o-transition: all 200ms ease-in-out;
     -webkit-transition: all 200ms ease-in-out;
