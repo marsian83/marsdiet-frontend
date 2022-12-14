@@ -33,6 +33,7 @@
   border-radius: 1rem;
   transition: 200ms ease-in-out;
   position: relative;
+  z-index: 1;
 }
 
 .top-card:hover {
@@ -42,4 +43,19 @@
 
 #top-card1 img {
   position: absolute;
+  z-index: -2;
+  height: 80%;
+  transform: translate(-10%,-25%);
+}
+#top-card2 img {
+  position: absolute;
+  z-index: -2;
+  height: 90%;
+  transform: translate(5%,-25%);
+}
+#top-card3 img {
+  position: absolute;
+  z-index: -2;
+  height: 90%;
+  transform: translate(14%,-28%);
 }

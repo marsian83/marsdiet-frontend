@@ -44,13 +44,13 @@ export const LandingPageBody = () => {
       >
         <div className="top-cards-container">
           <div className="top-card" id="top-card1">
-            as
+            <img src={require("../../assets/jogging.png")} alt="" />
           </div>
           <div className="top-card" id="top-card2">
-            a
+            <img src={require("../../assets/drinking-water.png")} alt="" />
           </div>
           <div className="top-card" id="top-card3">
-            a
+            <img src={require("../../assets/sleep-analysis.png")} alt="" />
           </div>
         </div>
       </motion.div>
