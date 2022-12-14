@@ -43,13 +43,13 @@ const LandingPageTop = () => {
                 2000,
                 "I had a chicken leg",
                 1000,
-                "Or just upload a picture",
+                "or just upload a picture!",
                 3000,
                 `Leave the rest to us`,
                 1500,
                 `We'll track your calories`,
                 1500,
-                "And Nutrients",
+                "and Nutrients!",
                 1000
               ]}
               wrapper="div"
