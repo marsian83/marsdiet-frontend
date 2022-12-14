@@ -110,15 +110,14 @@
   border-radius: 100%;
   aspect-ratio: 1;
   transition: 300ms;
-  animation-name: container-right-circle-gradient;
-  animation-duration: 10000ms;
+  animation: container-right-circle-gradient 10000ms,
+    container-right-circle-spin 6743ms;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
 @keyframes container-right-circle-gradient {
   0% {
-    transform: rotate(0deg);
     background-position: 0% 0;
   }
   20% {
@@ -128,7 +127,6 @@
     background-position: 80% 0;
   }
   50% {
-    transform: rotate(230deg);
     background-position: 0% 0;
   }
   70% {
@@ -138,8 +136,16 @@
     background-position: 80% 0;
   }
   100% {
-    transform: rotate(0deg);
     background-position: 0% 0;
+  }
+}
+
+@keyframes container-right-circle-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -150,33 +156,31 @@
 }
 
 .animated-text-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-weight: 400;
   background-color: #ffffff;
   border-radius: 2ch;
-  width: 40vw;
+  width: 45vw;
   height: 10vh;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   position: relative;
 }
 
-.animated-area{
-    display: flex;
-    flex-direction: row;
-    margin-top: -10vh;
-    align-items: center;
+.animated-area {
+  display: flex;
+  flex-direction: row;
+  margin-top: -10vh;
+  align-items: center;
 }
 
-.animated-area button{
-    
-    height: 8vh;
-    background-color: var(--primary);
-    border-radius: 10ch;
-    border: none;
-    font-size: 2ch;
-
+.animated-area button {
+  height: 8vh;
+  background-color: var(--primary);
+  border-radius: 10ch;
+  border: none;
+  font-size: 2ch;
 }
