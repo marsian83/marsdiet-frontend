@@ -1,0 +1,107 @@
+:root{
+    font-family: "Montserrat";
+}
+
+.navbar {
+  z-index: 10;
+  position: sticky;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: var(--page-padding-left);
+  padding-right: var(--page-padding-right);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navbar:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-brand img{
+    height: 3.8rem;
+}
+
+.navbar-brand-name{
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 2.55rem;
+    letter-spacing: 0.05ch;
+    margin-left: 0.8rem;
+}
+
+.navbar-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-item {
+  font-size: 1.5rem;
+  /* padding: 1vh 1vw; */
+  margin-left: 2.75ch;
+  font-weight: 500;
+  color:var(--text-primary);
+  letter-spacing: 0.01ch;
+  transition: 240ms ease;
+}
+
+.navbar-item:not(#navbar-item-login):hover{
+    color:var(--primary);
+    cursor: pointer;
+    transform: translateY(-2px);
+    animation-name: navbar-item-hover-bounce;
+    animation-duration: 169ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes navbar-item-hover-bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-2px);
+    }
+    70%{
+        transform: translateY(-3px);
+    }
+    90%{
+        transform: translateY((-1px));
+    }
+    100%{
+        transform: translateY(-2px);
+    }
+}
+
+.navbar-item button{
+    background-color: var(--primary);
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:var(--text-secondary);
+    padding:0.5ch 2ch;
+    border-radius:2rem;
+    letter-spacing: 0.09ch;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right,var(--primary-gradient-1),var(--primary-gradient-2), var(--primary-gradient-2), var(--primary-gradient-1));
+    /* box-shadow: 0 0px 8px 0 rgba(229, 66, 10, 0.75); */
+    -o-transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+.navbar-item button:hover {
+    background-position: 100% 0;
+    -o-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
