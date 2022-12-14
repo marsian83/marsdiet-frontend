@@ -13,7 +13,8 @@
 }
 
 .top-cards-heading h3 {
-  font-size: 4rem;
+  font-size: 2rem;
+  margin: 2vh 0;
   color: var(--text-primary);
 }
 
@@ -44,6 +45,12 @@
 
 .top-card img{
   transition: 350ms ease-in-out;
+}
+
+.top-card:hover img{
+  stroke: 1px black;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(2px 2px 3px #2222229a);
 }
 
 #top-card1 img {
@@ -104,6 +111,11 @@
 
 .top-card-bottom h4 {
   margin: 1vh 0;
+  font-size: 1.4rem;
+  transition: 500ms ease-in-out;
+}
+.top-card:hover .top-card-bottom h4{
+  font-size: 1rem;
 }
 
 .top-card-bottom p {
