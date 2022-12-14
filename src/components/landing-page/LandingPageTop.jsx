@@ -2,6 +2,7 @@ import React from 'react'
 import './LandingPageTop.scoped.css'
 // eslint-disable-next-line
 import { TypeAnimation } from 'react-type-animation';
+import 'font-awesome/css/font-awesome.min.css';
          
 
 const LandingPageTop = () => {
@@ -28,7 +29,10 @@ const LandingPageTop = () => {
           <div className='container-right-circle'>
           </div>
           <img src={require('../../assets/landingpage-mascot.png')} alt='moscot'/>
+
+          <div className='animated-area'>
           <div className='animated-text-area'>
+
           <TypeAnimation
       sequence={[
         'I Ate 3 slice of white-bread',
@@ -44,10 +48,12 @@ const LandingPageTop = () => {
       cursor={true}
       repeat={Infinity}
       style={{ fontSize: '2.2em', opacity: '80%' }}
-    />
+      />
+      </div>
+      </div>
+
           </div>
           </div>
-        </div>
   )
 }
 
