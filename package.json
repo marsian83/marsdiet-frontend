@@ -36,5 +36,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "marsdiet-api.cyclic.app"
+  "proxy": "https://marsdiet-api.cyclic.app"
 }

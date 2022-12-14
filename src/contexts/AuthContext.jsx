@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import { addDoc, collection } from "firebase/firestore";
-import { auth, db } from "../firebase";
+import { auth } from "../firebase";
 
 const AuthContext = React.createContext();
 
@@ -15,10 +14,7 @@ export default function AuthProvider({ children }) {
 
   async function signup(email, password) {
     let usr = await auth.createUserWithEmailAndPassword(email, password);
-    await addDoc(collection(db, "users"), {
-      uid: usr.user.uid,
-      type: "employer",
-    });
+    // ADD usr.user.uid TO MONGODB DATABASE
     return usr;
   }
 
