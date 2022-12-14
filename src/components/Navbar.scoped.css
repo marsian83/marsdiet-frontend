@@ -74,6 +74,7 @@
   letter-spacing: 0.01ch;
   transition: 240ms ease;
   color: var(--primary);
+  cursor: default;
 }
 
 @keyframes navbar-item-hover-bounce {
@@ -115,6 +116,7 @@
   -o-transition: all 200ms ease-in-out;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  cursor: pointer;
 }
 
 .navbar-item button:hover {

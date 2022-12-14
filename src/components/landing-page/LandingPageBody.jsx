@@ -50,8 +50,7 @@ export const LandingPageBody = () => {
               <h4>Take healthy choices</h4>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Explicabo recusandae consequatur minima aliquam odit repudiandae
-                hic?
+                Explicabo recusandae consequatur hic?
               </p>
             </div>
           </div>
@@ -62,8 +61,7 @@ export const LandingPageBody = () => {
               <h4>Take healthy choices</h4>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Explicabo recusandae consequatur minima aliquam odit repudiandae
-                hic?
+                Explicabo recusandae consequatur minima
               </p>
             </div>
           </div>
@@ -74,8 +72,7 @@ export const LandingPageBody = () => {
               <h4>Take healthy choices</h4>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Explicabo recusandae consequatur minima aliquam odit repudiandae
-                hic?
+                Explicabo recusandae consequatur hic?
               </p>
             </div>
           </div>
