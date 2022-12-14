@@ -25,7 +25,9 @@ const LandingPageTop = () => {
           <div className='container-right-circle'>
           </div>
           <img src={require('../../assets/landingpage-mascot.png')} alt='moscot'/>
-          <div className='animated-text-area'></div>
+          <div className='animated-text-area'>
+          <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+          </div>
         </div>
       
     </div>
