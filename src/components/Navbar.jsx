@@ -1,8 +1,14 @@
 import React from "react";
 import "./Navbar.scoped.css";
-import "../assets/logo.png"
+import "../assets/logo.png";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [currentPath, setCurrentPath] = useState("/");
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -11,13 +17,18 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-items">
-        <div className="navbar-item">Home</div>
+        <div
+          className={
+            currentPath === "/" ? "navbar-item-selected" : "navbar-item"
+          }
+        >
+          Home
+        </div>
         <div className="navbar-item">About</div>
         <div className="navbar-item">Help</div>
         <div className="navbar-item" id="navbar-item-login">
-            <button>
-                Login
-            </button></div>
+          <button>Login</button>
+        </div>
       </div>
     </nav>
   );
