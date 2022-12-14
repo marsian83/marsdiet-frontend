@@ -150,16 +150,33 @@
 }
 
 .animated-text-area {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-weight: 400;
   background-color: #ffffff;
   border-radius: 2ch;
-  width: 100%;
+  width: 40vw;
   height: 10vh;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   position: relative;
-  margin-top: -10vh;
-  font-weight: 400;
-  justify-content: center;
+}
+
+.animated-area{
+    display: flex;
+    flex-direction: row;
+    margin-top: -10vh;
+    align-items: center;
+}
+
+.animated-area button{
+    
+    height: 8vh;
+    background-color: var(--primary);
+    border-radius: 10ch;
+    border: none;
+    font-size: 2ch;
+
 }
