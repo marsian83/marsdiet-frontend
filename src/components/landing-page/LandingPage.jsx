@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../Footer";
 import Navbar from "../Navbar";
 import "./LandingPage.scoped.css";
 import { LandingPageBody } from "./LandingPageBody";
@@ -10,6 +11,7 @@ const LandingPage = () => {
       <Navbar />
       <LandingPageTop />
       <LandingPageBody />
+      <Footer />
     </>
   );
 };
