@@ -27,7 +27,7 @@ const Signup = (props) => {
             Having trouble in Sign In?{" "}
           </p>
         </div>
-        <button id="btn">Login</button>
+        <button id="btn">Sign Up</button>
         <div className="or-sign-in">
           <span>Or</span>
         </div>
