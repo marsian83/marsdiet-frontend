@@ -4,6 +4,7 @@ import "./Login.scoped.css";
 import "../../assets/google_logo.gif";
 
 const Login = (props) => {
+  
   //Login card js
   const inputAnimation = () => {
     const input = document.querySelectorAll(".input");
