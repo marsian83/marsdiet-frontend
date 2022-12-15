@@ -1,10 +1,15 @@
-:root {
+* {
   font-family: "Montserrat";
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
   z-index: 10;
-  position: sticky;
+  position: fixed;
   padding-top: 2vh;
   padding-bottom: 2vh;
   padding-left: var(--page-padding-left);
@@ -13,13 +18,35 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background-color: var(--background);
-  /* width: 100%; */
+  background-color: transparent;
+  /* transition: 300ms ease-in-out; */
+  width: calc(100vw - (var(--page-padding-left) + var(--page-padding-right)));
+  margin: 0;
 }
 
-.navbar:hover {
+.navbar.fixed {
+  background-color: var(--background);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  animation: navbar-fix-animation 200ms;
+}
+
+@keyframes navbar-fix-animation {
+  0% {
+    background-color: transparent;
+    padding-bottom: 6vh;
+    margin-bottom: -4vh;
+  }
+  60% {
+    background-color: var(--background);
+  }
+  100% {
+    margin-bottom: 0;
+    padding-bottom: 2vh;
+  }
+}
+
+.navbar.fixed:hover {
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 

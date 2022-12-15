@@ -3,14 +3,24 @@ import "./Navbar.scoped.css";
 import "../assets/logo.png";
 import { useEffect, useState } from "react";
 
+function vh(percent) {
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  return (percent * h) / 100;
+}
+
 const Navbar = () => {
   const [currentPath, setCurrentPath] = useState("/");
+  const [fix, setFix] = useState(false);
+
+  window.addEventListener("scroll", () => {
+    setFix(window.scrollY > vh(1));
+  });
 
   useEffect(() => {
     setCurrentPath(window.location.pathname);
   }, []);
   return (
-    <nav className="navbar">
+    <nav className={fix ? "navbar fixed" : "navbar"}>
       <div className="navbar-brand">
         <img src={require("../assets/logo.png")} alt="logo" />
         <div className="navbar-brand-name">MarsDiet</div>

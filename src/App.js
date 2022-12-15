@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<LandingPage />}/>
-          <Route exact path="/Auth" element={<Login />} />
+          <Route exact path="/auth" element={<Login />} />
         </Routes>
       </Router>
     </div>
