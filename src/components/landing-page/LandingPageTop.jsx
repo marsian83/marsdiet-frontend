@@ -44,35 +44,38 @@ const LandingPageTop = () => {
         <div className="container-right-circle" />
         <img
           src={require("../../assets/landingpage-mascot.png")}
-          alt="moscot"
+          alt="mascot"
         />
 
         <div className="animated-area">
           <div className="animated-text-area">
-            <TypeAnimation
-              sequence={[
-                "Tell us what you ate",
-                5000,
-                "I ate 3 slices of white-bread",
-                1500,
-                "2 Glasses of milk",
-                2000,
-                "I had a chicken leg",
-                1000,
-                "or just upload a picture!",
-                3000,
-                `Leave the rest to us`,
-                1500,
-                `We'll track your calories`,
-                1500,
-                "and Nutrients!",
-                1000,
-              ]}
-              wrapper="div"
-              cursor={true}
-              repeat={Infinity}
-              style={{ fontSize: "2.2em", opacity: "80%" }}
-            />
+            {
+              // eslint-disable-next-line
+              <TypeAnimation
+                sequence={[
+                  "Tell us what you ate",
+                  5000,
+                  "I ate 3 slices of white-bread",
+                  1500,
+                  "2 Glasses of milk",
+                  2000,
+                  "I had a chicken leg",
+                  1000,
+                  "or just upload a picture!",
+                  3000,
+                  `Leave the rest to us`,
+                  1500,
+                  `We'll track your calories`,
+                  1500,
+                  "and Nutrients!",
+                  1000,
+                ]}
+                wrapper="div"
+                cursor={true}
+                repeat={Infinity}
+                style={{ fontSize: "2.2em", opacity: "80%" }}
+              />
+            }
           </div>
         </div>
       </div>

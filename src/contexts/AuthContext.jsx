@@ -1,36 +1,63 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { createContext } from "react";
+import { auth} from "../firebase";
+import {
+  onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+  updateEmail,
+  updatePassword,
+  signOut,
+} from "@firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "@firebase/auth";
 
-import { auth } from "../firebase";
+const AuthContext = createContext();
 
-const AuthContext = React.createContext();
-
-export function useAuth() {
+export const useAuth = () => {
   return useContext(AuthContext);
-}
+};
 
-export default function AuthProvider({ children }) {
-  const [currentUser, setCurrentUser] = useState();
-  const [loading, setLoading] = useState(true);
+export const AuthProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState(null);
 
-  async function signup(email, password) {
-    let usr = await auth.createUserWithEmailAndPassword(email, password);
-    // ADD usr.user.uid TO MONGODB DATABASE
-    return usr;
-  }
+  const signup = async (email, password) => {
+    await createUserWithEmailAndPassword(auth, email, password);
+  };
 
-  function login(email, password) {
-    return auth.signInWithEmailAndPassword(email, password);
-  }
+  const login = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
-  function logout() {
-    return auth.signOut();
-  }
+  const logout = () => {
+    return signOut(auth);
+  };
+
+  const resetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
+
+  const setEmail = (email) => {
+    return updateEmail(currentUser, email);
+  };
+
+  const setPassword = (password) => {
+    return updatePassword(currentUser, password);
+  };
+
+  const googleSignin = async () => {
+    const provider = new GoogleAuthProvider();
+    const results = await signInWithPopup(auth, provider);
+    console.log(results)
+  };
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
-      setLoading(false);
     });
+
     return unsubscribe;
   }, []);
 
@@ -38,12 +65,11 @@ export default function AuthProvider({ children }) {
     currentUser,
     signup,
     login,
+    googleSignin,
     logout,
+    resetPassword,
+    setEmail,
+    setPassword,
   };
-
-  return (
-    <AuthContext.Provider value={value}>
-      {!loading && children}
-    </AuthContext.Provider>
-  );
-}
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+};

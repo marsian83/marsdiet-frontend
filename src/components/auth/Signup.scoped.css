@@ -101,6 +101,12 @@
   animation: changeGradientAnimation 20000ms linear infinite;
 }
 
+#btn:disabled,
+#btn[disabled] {
+  opacity: 60%;
+  cursor: not-allowed;
+}
+
 .inputs-holder {
   display: flex;
   flex-direction: column;
@@ -165,16 +171,22 @@
   background-color: var(--background);
 }
 
+#sign-in-with-google:disabled,
+#sign-in-with-google[disabled] {
+  opacity: 60%;
+  cursor: not-allowed;
+}
+
 .play-on-hover {
   padding-right: 1ch;
   height: 8vh;
   width: 8vh;
-  background-image: url(../../assets/google-logo.jpg);
+  background-image: url("../../assets/google-logo.jpg");
   background-size: cover;
 }
 
 #sign-in-with-google:hover .play-on-hover {
-  background-image: url(../../assets/google_logo.gif);
+  background-image: url("../../assets/google_logo.gif");
 }
 
 #element {

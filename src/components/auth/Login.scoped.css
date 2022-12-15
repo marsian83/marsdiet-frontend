@@ -102,6 +102,12 @@
   animation: changeGradientAnimation 20000ms linear infinite;
 }
 
+#btn:disabled,
+#btn[disabled] {
+  opacity: 60%;
+  cursor: not-allowed;
+}
+
 .inputs-holder {
   display: flex;
   flex-direction: column;
@@ -179,6 +185,12 @@
 #sign-in-with-google:hover {
   border: 2px solid #000;
   background-color: var(--background);
+}
+
+#sign-in-with-google:disabled,
+#sign-in-with-google[disabled] {
+  opacity: 60%;
+  cursor: not-allowed;
 }
 
 .play-on-hover {

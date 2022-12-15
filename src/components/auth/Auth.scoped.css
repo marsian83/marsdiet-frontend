@@ -46,6 +46,10 @@
   color: var(--text-primary);
 }
 
+.back-button.hidden{
+  opacity: 0;
+}
+
 .back-button p {
   margin: 0;
   margin-left: 0.5ch;
