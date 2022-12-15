@@ -1,34 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
-import "./Login.scoped.css";
-import "../../assets/google_logo.gif";
+import "./Signup.scoped.css";
 
-const Login = (props) => {
-  //Login card js
-  const inputAnimation = () => {
-    const input = document.querySelectorAll(".input");
-    function inputFocus() {
-      this.parentNode.classList.add("focus");
-    }
-    function inputBlur() {
-      if (this.value === "" || this.value === null) {
-        this.parentNode.classList.remove("focus");
-      }
-    }
-    input.forEach((e) => {
-      e.addEventListener("focus", inputFocus);
-      e.addEventListener("blur", inputBlur);
-    });
-  };
-
-  useEffect(() => {
-    inputAnimation();
-  });
-
+const Signup = (props) => {
   return (
-    <div className={props.current === "login" ? "open" : "closed"}>
+    <div className={props.current === "signup" ? "open" : "closed"}>
       <div id="content">
-        <h1>MarsDiet Login</h1>
+        <h1>MarsDiet Sign In</h1>
         <p>Hey, Enter your details to get sign in to your account.</p>
         <div>
           <div className="input-bar">
@@ -44,7 +21,7 @@ const Login = (props) => {
           <p
             className="login-trouble"
             onClick={() => {
-              props.setCurrent("signup");
+              props.setCurrent("login");
             }}
           >
             Having trouble in Sign In?{" "}
@@ -63,4 +40,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default Signup;

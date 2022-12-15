@@ -23,6 +23,7 @@ body {
   /* transition: 300ms ease-in-out; */
   width: calc(100vw - (var(--page-padding-left) + var(--page-padding-right)));
   margin: 0;
+  /* animation: navbar-fix-animation 200ms ease-out 0ms 1 reverse;   */
 }
 
 .navbar.fixed {
