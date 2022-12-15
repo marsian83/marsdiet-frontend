@@ -26,7 +26,7 @@ const Login = (props) => {
   });
 
   return (
-    <div className={props.current === "login" ? "open" : "closed"}>
+    <div className={`container ${props.current === "login" ? "open" : "closed"}`}>
       <div id="content">
         <h1>MarsDiet Login</h1>
         <p>Hey, Enter your details to get sign in to your account.</p>

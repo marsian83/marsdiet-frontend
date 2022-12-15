@@ -155,52 +155,39 @@
   padding-right: 1ch;
   height: 8vh;
   width: 8vh;
-  background-image: url(../../assets/google-logo.jpg);
+  background-image: url('../../assets/google-logo.jpg');
   background-size: cover;
 }
 
 #sign-in-with-google:hover .play-on-hover {
-  background-image: url(../../assets/google_logo.gif);
+  background-image: url('../../assets/google_logo.gif');
+}
+
+.container {
+  animation-duration: 500ms;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .open {
-  animation: content-open-animation 400ms,
-    content-close-animation 400ms ease-in-out 400ms 1 reverse;
+  animation-direction: normal;
+  animation-name: open-close-animation;
 }
 
 .closed {
+  animation-direction: reverse;
+  animation-name: open-close-animation;
   visibility: hidden;
 }
 
-.closed #content {
-  animation: content-close-animation 400ms ease-in-out;
-  overflow: hidden;
-  transform-origin: 100% 50%;
-}
-
-@keyframes content-close-animation {
-  0% {
-    transform: scale(1) translateX(0);
-    visibility: visible;
-    opacity: 1;
-  }
-
-  70% {
-    opacity: 0.5;
-  }
-
-  100% {
-    transform: scale(0) translateX(50vw);
-    visibility: visible;
-    opacity: 0;
-  }
-}
-
-@keyframes content-open-animation {
+@keyframes open-close-animation {
   from {
-    visibility: hidden;
+    transform: translateX(-50vw);
+    opacity: 0;
+    visibility: visible;
   }
   to {
-    visibility: hidden;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
