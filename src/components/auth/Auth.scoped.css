@@ -27,7 +27,23 @@
 
 .back-button:hover {
   transform: scale(1.1);
+}
+
+.back-button.login {
+  color: var(--text-primary);
+}
+
+.back-button.login:hover {
   color: var(--primary);
+}
+
+.back-button.signup {
+  color: var(--text-secondary);
+  z-index: 5;
+}
+
+.back-button.signup:hover {
+  color: var(--text-primary);
 }
 
 .back-button p {

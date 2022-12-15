@@ -9,7 +9,7 @@ const Signup = (props) => {
       <div id="content">
         <h1>MarsDiet Sign Up</h1>
         {/* <p>Welcome! Fill all details correctly so that we can better understand you.</p> */}
-        <div>
+        <div className="inputs-holder">
           <div className="input-bar">
             <label htmlFor="name">username</label>
             <input type="text" id="name" className="input" />
@@ -26,12 +26,12 @@ const Signup = (props) => {
             <box-icon name="lock-alt" />
           </div>
           <p
-            className="login-trouble"
+            className="login-hint"
             onClick={() => {
               props.setCurrent("login");
             }}
           >
-            Having trouble in Sign In?{" "}
+            Already have an account? Login
           </p>
         </div>
         <button id="btn">Sign Up</button>

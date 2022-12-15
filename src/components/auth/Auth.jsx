@@ -30,7 +30,7 @@ const Auth = () => {
     <>
       <div className={`transition-cover ${transition}`} />
       <button
-        className="back-button"
+        className={`back-button ${current}`}
         onClick={() => {
           pageTransition(-1);
         }}

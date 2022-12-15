@@ -30,15 +30,10 @@ const Login = (props) => {
     <div
       className={`container ${props.current === "login" ? "open" : "closed"}`}
     >
-      <img
-      id="element"
-        src={authWaves}
-        alt="waves"
-      />
+      <img id="element" src={authWaves} alt="waves" />
       <div id="content">
         <h1>MarsDiet Login</h1>
-        <p>Hey, Enter your details to get sign in to your account.</p>
-        <div>
+        <div className="inputs-holder">
           <div className="input-bar">
             <label htmlFor="name">username</label>
             <input type="text" id="name" className="input" />
@@ -50,9 +45,17 @@ const Login = (props) => {
             <box-icon name="lock-alt" />
           </div>
           <p
-            className="login-trouble"
+            className="signup-hint"
+            onClick={() => {
+              props.setCurrent("signup");
+            }}
           >
-            Having trouble in Sign In?{" "}
+            Don't have an account? click here to signup
+          </p>
+          <p
+            className="forgot-password"
+          >
+            Forgot password?
           </p>
         </div>
         <button id="btn">Login</button>
@@ -63,13 +66,6 @@ const Login = (props) => {
           <div className="play-on-hover" />
           Continue with Google
         </button>
-      </div>
-      <div className="switch-side" onClick={() => {
-              props.setCurrent("signup");
-            }}>
-        <button className="switch-side-button">&#129066;</button>
-        <div className="switch-side-text">Sign Up</div>
-        {/* &rarr; */}
       </div>
     </div>
   );

@@ -33,6 +33,7 @@
   margin: 3vh 0 0 0;
   opacity: 0.5;
   transition: 200ms;
+  transition-property: opacity;
   font-weight: 600;
   position: relative;
 }
@@ -44,6 +45,7 @@
   top: 2vh;
   left: 3vw;
   transition: 200ms;
+  transition-property: top, font-size;
 }
 
 .input-bar > input {
@@ -92,25 +94,49 @@
     var(--primary-gradient-2),
     var(--primary-gradient-1)
   );
-  /* -o-transition: all 200ms ease-in-out;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out; */
   cursor: pointer;
 }
 
 #btn:hover {
   background-position: 100% 0;
   animation: changeGradientAnimation 20000ms linear infinite;
-
-  /* -o-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out; */
 }
 
-.login-trouble {
-  padding-left: 1.8vw;
-  font-weight: 500;
+.inputs-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-hint {
+  color: var(--primary);
+  /* padding-left: 1.8vw; */
+  padding-top: 1.5ch;
+  font-weight: 600;
+  text-decoration: underline;
   margin-top: 1vh;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signup-hint:hover {
+  text-decoration: none;
+}
+
+.forgot-password {
+  color: var(--primary);
+  /* padding-left: 1.8vw; */
+  padding-top: 1ch;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 1vh;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  text-decoration: none;
 }
 
 .or-sign-in {
@@ -254,7 +280,6 @@
   }
 }
 
-
 @keyframes changeGradientAnimation {
   0% {
     background-position: 0%;
@@ -264,7 +289,7 @@
   }
 }
 
-.switch-side{
+.switch-side {
   margin-left: 40%;
   display: flex;
   flex-direction: row;
@@ -274,8 +299,9 @@
   font-size: 1.5rem;
 }
 
-.switch-side-button{
+.switch-side-button {
   background-color: var(--primary);
+  padding-left: 0.5ch;
   border: none;
   border-radius: 100%;
   font-size: 2rem;
@@ -283,25 +309,24 @@
   font-weight: 500;
   margin-left: -2.2ch;
   transition: 1000ms ease;
+  transition-property: padding, border;
   aspect-ratio: 1;
   height: 2ch;
+  cursor: pointer;
 }
-.switch-side-text{
+.switch-side-text {
   position: fixed;
   font-weight: 600;
   color: var(--primary);
   transition: 1000ms ease;
+  transition-property: color;
 }
 
-.switch-side:hover .switch-side-button{
-  padding-left: 9ch;
+.switch-side:hover .switch-side-button {
+  padding-right: 9ch;
   border-radius: 10ch;
-  cursor: pointer;
 }
 
-.switch-side:hover .switch-side-text{
+.switch-side:hover .switch-side-text {
   color: #fff;
-  cursor: pointer;
 }
-
-
