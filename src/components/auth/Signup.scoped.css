@@ -1,5 +1,5 @@
-*{
-    font-family: "Montserrat";
+* {
+  font-family: "Montserrat";
 }
 
 #content {
@@ -10,10 +10,44 @@
   background-color: var(--background);
 }
 
-.open{
-    
+.open {
+  animation: content-open-animation 400ms,
+    content-close-animation 400ms ease-in-out 400ms 1 reverse;
 }
 
-.closed{
+.closed {
+  visibility: hidden;
+}
+
+.closed #content {
+  animation: content-close-animation 400ms ease-in-out;
+  overflow: hidden;
+  transform-origin: 0% 50%;
+}
+
+@keyframes content-close-animation {
+  0% {
+    transform: scale(1) translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(0) translateX(-50vw);
+    visibility: visible;
+    opacity: 0;
+  }
+}
+
+@keyframes content-open-animation {
+  from {
     visibility: hidden;
-}   
+  }
+  to {
+    visibility: hidden;
+  }
+}
