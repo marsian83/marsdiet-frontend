@@ -20,23 +20,23 @@
   flex-wrap: wrap;
 }
 
-.social-icon__item,
-.menu__item {
+.social-icon-item,
+.menu-item {
   list-style: none;
 }
 
-.social-icon__link {
+.social-icon-link {
   font-size: 2rem;
   color: #fff;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
 }
-.social-icon__link:hover {
+.social-icon-link:hover {
   transform: translateY(-10px);
 }
 
-.menu__link {
+.menu-link {
   font-size: 1.2rem;
   color: #fff;
   margin: 0 10px;
@@ -45,16 +45,15 @@
   text-decoration: none;
   opacity: 0.75;
   font-weight: 300;
+  cursor: pointer;
 }
-.menu__link:hover {
+.menu-link:hover {
   color: white;
-}
-
-.menu__link:hover {
   opacity: 1;
+  transform: scale(1.05);
 }
 
-.footer p {
+.foot-note {
   color: #fff;
   margin: 15px 0 10px 0;
   font-size: 1rem;

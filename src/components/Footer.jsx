@@ -12,23 +12,23 @@ export const Footer = () => {
       </div>
 
       <ul className="menu">
-        <li className="menu__item">
-          <a className="menu__link" onClick={() => {}}>
+        <li className="menu-item">
+          <p className="menu-link" onClick={() => {}}>
             Home
-          </a>
+          </p>
         </li>
-        <li className="menu__item">
-          <a className="menu__link" onClick={() => {}}>
+        <li className="menu-item">
+          <p className="menu-link" onClick={() => {}}>
             About us
-          </a>
+          </p>
         </li>
-        <li className="menu__item">
-          <a className="menu__link" onClick={() => {}}>
+        <li className="menu-item">
+          <p className="menu-link" onClick={() => {}}>
             Contact us
-          </a>
+          </p>
         </li>
       </ul>
-      <p style={{ opacity: 0.75 }}>Made with 🤍 by Riya & Spandan</p>
+      <p className="foot-note" style={{ opacity: 0.75 }}>Made with 🤍 by Riya & Spandan</p>
     </footer>
   );
 };
