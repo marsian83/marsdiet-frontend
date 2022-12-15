@@ -1,9 +1,11 @@
 import React from "react";
+import authWaves from "../../assets/auth-waves.svg";
 import "./Signup.scoped.css";
 
 const Signup = (props) => {
   return (
     <div className={props.current === "signup" ? "open" : "closed"}>
+      <img id="element" src={authWaves} alt="waves" />
       <div id="content">
         <h1>MarsDiet Sign Up</h1>
         {/* <p>Welcome! Fill all details correctly so that we can better understand you.</p> */}

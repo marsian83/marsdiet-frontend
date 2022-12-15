@@ -155,39 +155,97 @@
   padding-right: 1ch;
   height: 8vh;
   width: 8vh;
-  background-image: url('../../assets/google-logo.jpg');
+  background-image: url("../../assets/google-logo.jpg");
   background-size: cover;
 }
 
 #sign-in-with-google:hover .play-on-hover {
-  background-image: url('../../assets/google_logo.gif');
+  background-image: url("../../assets/google_logo.gif");
 }
 
-.container {
-  animation-duration: 500ms;
-  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+#element {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: -50vw;
+  transform: rotateZ(-90deg);
 }
 
-.open {
-  animation-direction: normal;
-  animation-name: open-close-animation;
+.open #content {
+  animation: content-open-animation 500ms;
+}
+
+.open #element {
+  animation: element-open-animation 900ms;
 }
 
 .closed {
-  animation-direction: reverse;
-  animation-name: open-close-animation;
+  --close-animation-duration: 300ms;
+  animation: open-close-animation var(--close-animation-duration);
   visibility: hidden;
 }
 
-@keyframes open-close-animation {
+.closed #content {
+  animation: content-close-animation var(--close-animation-duration);
+}
+
+.closed #element {
+  animation: element-close-animation var(--close-animation-duration);
+}
+
+@keyframes content-open-animation {
   from {
-    transform: translateX(-50vw);
+    transform: translateX(-50%);
     opacity: 0;
     visibility: visible;
   }
   to {
     transform: translateX(0);
     opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes element-open-animation {
+  from {
+    right: -100vw;
+    opacity: 0;
+  }
+  to {
+    right: -50vw;
+    opacity: 1;
+  }
+}
+
+@keyframes content-close-animation {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: visible;
+  }
+}
+
+@keyframes element-close-animation {
+  from {
+    right: -50vw;
+    opacity: 1;
+  }
+  to {
+    right: -100vw;
+    opacity: 0;
+  }
+}
+
+@keyframes open-close-animation {
+  from {
+    visibility: visible;
+  }
+  to {
     visibility: visible;
   }
 }

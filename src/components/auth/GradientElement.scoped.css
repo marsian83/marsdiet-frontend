@@ -9,6 +9,7 @@
   right: -50vw;
   transform: rotateZ(-90deg);
   animation: login-animation 800ms;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .signup {

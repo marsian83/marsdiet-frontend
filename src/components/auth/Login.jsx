@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
 import "./Login.scoped.css";
+import authWaves from "../../assets/auth-waves.svg";
 import "../../assets/google_logo.gif";
 
 const Login = (props) => {
-
   //Login card js
   const inputAnimation = () => {
     const input = document.querySelectorAll(".input");
@@ -27,7 +27,14 @@ const Login = (props) => {
   });
 
   return (
-    <div className={`container ${props.current === "login" ? "open" : "closed"}`}>
+    <div
+      className={`container ${props.current === "login" ? "open" : "closed"}`}
+    >
+      <img
+      id="element"
+        src={authWaves}
+        alt="waves"
+      />
       <div id="content">
         <h1>MarsDiet Login</h1>
         <p>Hey, Enter your details to get sign in to your account.</p>
