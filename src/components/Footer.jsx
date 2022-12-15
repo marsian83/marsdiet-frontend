@@ -28,7 +28,7 @@ export const Footer = () => {
           </p>
         </li>
       </ul>
-      <p className="foot-note" style={{ opacity: 0.75 }}>Made with 🤍 by sPAndan nbarna</p>
+      <p className="foot-note" style={{ opacity: 0.75 }}>Made with 🤍 by Spandan Barve</p>
     </footer>
   );
 };

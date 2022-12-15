@@ -94,18 +94,11 @@
     var(--primary-gradient-2),
     var(--primary-gradient-1)
   );
-  /* -o-transition: all 200ms ease-in-out;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out; */
   cursor: pointer;
 }
 
 #btn:hover {
-  /* background-position: 100% 0; */
   animation: changeGradientAnimation 20000ms linear infinite;
-  /* -o-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out; */
 }
 
 .inputs-holder {
