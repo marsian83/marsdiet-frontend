@@ -67,7 +67,7 @@ const Login = (props) => {
       <div className="switch-side" onClick={() => {
               props.setCurrent("signup");
             }}>
-        <button className="switch-side-button">&#129082;</button>
+        <button className="switch-side-button">&#129066;</button>
         <div className="switch-side-text">Sign Up</div>
         {/* &rarr; */}
       </div>
