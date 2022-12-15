@@ -1,38 +1,11 @@
 import React from 'react'
-import { useEffect } from 'react';
-import './Login.scoped.css'
-import '../../assets/google_logo.gif'
+import './SignIn.scoped.css'
 
-const Login = () => {
-
-
-//Login card js 
-const inputAnimation = () => {
-const input = document.querySelectorAll('.input');
-function inputFocus() {
-    this.parentNode.classList.add('focus');
-}
-function inputBlur() {
-    if(this.value === '' || this.value === null){
-        this.parentNode.classList.remove('focus');
-    }
-}
-input.forEach((e) => {
-    e.addEventListener('focus', inputFocus);
-    e.addEventListener('blur', inputBlur);
-})
-}
-
-
-useEffect(()=>{
-inputAnimation();
-})
-
-
+const SignIn = () => {
   return (
     <div>
     <div id="content">
-        <h1>MarsDiet Login
+        <h1>MarsDiet Sign In
         </h1>
         <p>Hey, Enter your details to get sign in to your account.</p>
         <div>
@@ -54,9 +27,9 @@ inputAnimation();
             <div className='play-on-hover'></div>
 
             Sign in with Google</button>
-    </div>
+    </div>   
     </div>
   )
 }
 
-export default Login
+export default SignIn

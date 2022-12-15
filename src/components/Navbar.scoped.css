@@ -96,7 +96,6 @@
 }
 
 .navbar-item button {
-  background-color: var(--primary);
   border: none;
   font-size: 1.5rem;
   font-weight: 500;
