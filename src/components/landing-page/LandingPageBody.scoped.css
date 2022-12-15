@@ -50,7 +50,7 @@
   transform: translateY(-1rem) scale(1.02);
   box-shadow: 0px 3px 15px -5px var(--text-primary);
   background-color: #fff9f4;
-  color: var(--primary);
+  color:#000;
 }
 
 .top-card img {

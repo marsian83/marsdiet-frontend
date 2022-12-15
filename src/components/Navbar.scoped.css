@@ -131,11 +131,12 @@ body {
   padding: 0.5ch 2ch;
   border-radius: 2rem;
   letter-spacing: 0.09ch;
-  background-size: 300% 100%;
+  background-size: 500%;
   background-image: linear-gradient(
-    to right,
+    145deg,
     var(--primary-gradient-1),
     var(--primary-gradient-2),
+    var(--primary-gradient-1),
     var(--primary-gradient-2),
     var(--primary-gradient-1)
   );
@@ -147,8 +148,22 @@ body {
 }
 
 .navbar-item button:hover {
+
   background-position: 100% 0;
+  animation: changeGradientAnimation 20000ms linear infinite;
+
+  /* background-position: 100% 0;
   -o-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; */
+}
+
+
+@keyframes changeGradientAnimation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
