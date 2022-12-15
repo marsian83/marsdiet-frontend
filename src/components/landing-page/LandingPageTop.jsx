@@ -3,10 +3,26 @@ import "./LandingPageTop.scoped.css";
 // eslint-disable-next-line
 import { TypeAnimation } from "react-type-animation";
 // import 'font-awesome/css/font-awesome.min.css';
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const LandingPageTop = () => {
+  const [authTransition, setAuthTransition] = useState(false);
+
+  const navigate = useNavigate();
+  const goToAuth = () => {
+    setAuthTransition(true);
+    setTimeout(() => {
+      navigate("/auth");
+    }, 300);
+  };
   return (
     <div className="container">
+      <div
+        className={`transition-cover ${
+          authTransition ? "show-transition-cover" : ""
+        }`}
+      />
       <div className="container-left">
         <div className="container-left-heading">
           Healthy <br /> <span>food</span> for <br />a healthy life
@@ -20,8 +36,8 @@ const LandingPageTop = () => {
           soluta! Adipisci, alias esse!
         </div>
         <div className="container-left-buttons">
-          <button>Login</button>
-          <button>SignUp</button>
+          <button onClick={goToAuth}>Login</button>
+          <button onClick={goToAuth}>SignUp</button>
         </div>
       </div>
       <div className="container-right">
@@ -50,7 +66,7 @@ const LandingPageTop = () => {
                 `We'll track your calories`,
                 1500,
                 "and Nutrients!",
-                1000
+                1000,
               ]}
               wrapper="div"
               cursor={true}

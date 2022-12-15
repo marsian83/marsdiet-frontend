@@ -189,3 +189,29 @@
   border: none;
   font-size: 2ch;
 }
+
+.transition-cover {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+  z-index: 100;
+}
+
+.show-transition-cover {
+  animation: fade-in 300ms;
+  display: block;
+  opacity: 1;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

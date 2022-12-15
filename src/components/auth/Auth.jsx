@@ -9,6 +9,7 @@ const Auth = () => {
 
   return (
     <>
+      <div className="transition-cover" />
       <div className="auth-container">
         <Login setCurrent={setCurrent} current={current} />
         <Signup setCurrent={setCurrent} current={current} />

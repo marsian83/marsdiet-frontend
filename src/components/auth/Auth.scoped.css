@@ -1,12 +1,37 @@
 * {
-    font-family: "Montserrat";
+  font-family: "Montserrat";
 }
 
 .auth-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.transition-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+  /* display: none; */
+  animation: fadeout 2000ms;
+  z-index: -100;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    z-index: 100;
+  }
+  to {
+    opacity: 0;
+    display: flex;
+    z-index: 100;
+  }
 }
