@@ -163,11 +163,6 @@
   background-image: url(../../assets/google_logo.gif);
 }
 
-<<<<<<< HEAD
-.closed{
-  /* visibility: hidden; */
-  animation: close-animation 2000ms ease-in-out;
-=======
 .open {
   animation: content-open-animation 400ms,
     content-close-animation 400ms ease-in-out 400ms 1 reverse;
@@ -175,7 +170,6 @@
 
 .closed {
   visibility: hidden;
->>>>>>> 8f573dfcb30e2b7c3ce5cfa5b8f6a4999a3c6d4d
 }
 
 .closed #content {

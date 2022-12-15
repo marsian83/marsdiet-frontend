@@ -6,7 +6,7 @@ const Signup = (props) => {
     <div className={props.current === "signup" ? "open" : "closed"}>
       <div id="content">
         <h1>MarsDiet Sign Up</h1>
-        <p>Welcome! Fill all details correctly so that we can better understand you.</p>
+        {/* <p>Welcome! Fill all details correctly so that we can better understand you.</p> */}
         <div>
           <div className="input-bar">
             <label htmlFor="name">username</label>
@@ -16,6 +16,11 @@ const Signup = (props) => {
           <div className="input-bar">
             <label htmlFor="password">password</label>
             <input type="password" id="password" className="input" />
+            <box-icon name="lock-alt" />
+          </div>
+          <div className="input-bar">
+            <label htmlFor="password">confirm password</label>
+            <input type="password" id="confirm-password" className="input" />
             <box-icon name="lock-alt" />
           </div>
           <p
