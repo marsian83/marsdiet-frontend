@@ -51,9 +51,6 @@ const Login = (props) => {
           </div>
           <p
             className="login-trouble"
-            onClick={() => {
-              props.setCurrent("signup");
-            }}
           >
             Having trouble in Sign In?{" "}
           </p>
@@ -66,6 +63,13 @@ const Login = (props) => {
           <div className="play-on-hover" />
           Continue with Google
         </button>
+      </div>
+      <div className="switch-side" onClick={() => {
+              props.setCurrent("signup");
+            }}>
+        <button className="switch-side-button">&#129082;</button>
+        <div className="switch-side-text">Sign Up</div>
+        {/* &rarr; */}
       </div>
     </div>
   );

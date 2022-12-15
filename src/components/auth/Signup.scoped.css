@@ -83,11 +83,12 @@
   border-radius: 30px;
   cursor: pointer;
   margin-top: 3vh;
-  background-size: 300% 100%;
+  background-size: 500%;
   background-image: linear-gradient(
-    to right,
+    145deg,
     var(--primary-gradient-1),
     var(--primary-gradient-2),
+    var(--primary-gradient-1),
     var(--primary-gradient-2),
     var(--primary-gradient-1)
   );
@@ -98,7 +99,8 @@
 }
 
 #btn:hover {
-  background-position: 100% 0;
+  /* background-position: 100% 0; */
+  animation: changeGradientAnimation 20000ms linear infinite;
   /* -o-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out; */
@@ -248,5 +250,14 @@
   }
   to {
     visibility: visible;
+  }
+}
+
+@keyframes changeGradientAnimation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 500%;
   }
 }

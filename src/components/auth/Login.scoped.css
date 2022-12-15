@@ -78,15 +78,17 @@
   border: none;
   padding: 15px;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   border-radius: 30px;
   cursor: pointer;
   margin-top: 3vh;
-  background-size: 300% 100%;
+  background-size: 500%;
   background-image: linear-gradient(
-    to right,
+    145deg,
     var(--primary-gradient-1),
     var(--primary-gradient-2),
+    var(--primary-gradient-1),
     var(--primary-gradient-2),
     var(--primary-gradient-1)
   );
@@ -98,6 +100,8 @@
 
 #btn:hover {
   background-position: 100% 0;
+  animation: changeGradientAnimation 20000ms linear infinite;
+
   /* -o-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out; */
@@ -249,3 +253,55 @@
     visibility: visible;
   }
 }
+
+
+@keyframes changeGradientAnimation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+.switch-side{
+  margin-left: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-top: 6vh;
+  font-size: 1.5rem;
+}
+
+.switch-side-button{
+  background-color: var(--primary);
+  border: none;
+  border-radius: 100%;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin-left: -2.2ch;
+  transition: 1000ms ease;
+  aspect-ratio: 1;
+  height: 2ch;
+}
+.switch-side-text{
+  position: fixed;
+  font-weight: 600;
+  color: var(--primary);
+  transition: 1000ms ease;
+}
+
+.switch-side:hover .switch-side-button{
+  padding-left: 9ch;
+  border-radius: 10ch;
+  cursor: pointer;
+}
+
+.switch-side:hover .switch-side-text{
+  color: #fff;
+  cursor: pointer;
+}
+
+
