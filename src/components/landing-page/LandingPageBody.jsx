@@ -43,37 +43,43 @@ export const LandingPageBody = () => {
         animate={control}
       >
         <div className="top-cards-container">
-          <div className="top-card" id="top-card1">
-            <img src={require("../../assets/jogging.png")} alt="" />
-            <div className="top-card-top" />
-            <div className="top-card-bottom">
-              <h4>Take healthy choices</h4>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Explicabo recusandae consequatur hic?
-              </p>
+          <div className="top-card-holder" id="top-card-holder1">
+            <div className="top-card" id="top-card1">
+              <img src={require("../../assets/jogging.png")} alt="" />
+              <div className="top-card-top" />
+              <div className="top-card-bottom">
+                <h4>Take healthy choices</h4>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Explicabo recusandae consequatur hic?
+                </p>
+              </div>
             </div>
           </div>
-          <div className="top-card" id="top-card2">
-            <img src={require("../../assets/drinking-water.png")} alt="" />
-            <div className="top-card-top" />
-            <div className="top-card-bottom">
-              <h4>Take healthy choices</h4>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Explicabo recusandae consequatur minima
-              </p>
+          <div className="top-card-holder" id="top-card-holder2">
+            <div className="top-card" id="top-card2">
+              <img src={require("../../assets/drinking-water.png")} alt="" />
+              <div className="top-card-top" />
+              <div className="top-card-bottom">
+                <h4>Take healthy choices</h4>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Explicabo recusandae consequatur minima
+                </p>
+              </div>
             </div>
           </div>
-          <div className="top-card" id="top-card3">
-            <img src={require("../../assets/sleep-analysis.png")} alt="" />
-            <div className="top-card-top" />
-            <div className="top-card-bottom">
-              <h4>Take healthy choices</h4>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Explicabo recusandae consequatur hic?
-              </p>
+          <div className="top-card-holder" id="top-card-holder3">
+            <div className="top-card" id="top-card3">
+              <img src={require("../../assets/sleep-analysis.png")} alt="" />
+              <div className="top-card-top" />
+              <div className="top-card-bottom">
+                <h4>Take healthy choices</h4>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Explicabo recusandae consequatur hic?
+                </p>
+              </div>
             </div>
           </div>
         </div>
