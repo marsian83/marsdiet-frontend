@@ -5,19 +5,12 @@
   font-family: "Montserrat";
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #content {
   width: 25vw;
   padding: 3vw;
   box-shadow: 0 11px 17px 5px rgb(0 0 0 / 33%);
   border-radius: 5vh;
+  background-color: var(--background);
 }
 
 #content > h1 {
