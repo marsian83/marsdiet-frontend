@@ -19,9 +19,9 @@ export const GradientElement = (props) => {
       style={{
         clipPath:
           props.current === "login"
-            ? "polygon(0% 0%, 0% 0%, 100% 100%, 100% 0%)"
+            ? "polygon(0% 50%, 0% 0%, 100% 100%, 100% 0%)"
             : props.current === "signup"
-            ? "polygon(0% 0%, 0% 100%, 100% 0%, 100% 0%)"
+            ? "polygon(0% 0%, 0% 100%, 100% 0%, 100% 50%)"
             : "",
       }}
     />

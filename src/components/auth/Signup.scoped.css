@@ -1,4 +1,5 @@
 *{
+    outline: none;
     font-family: "Montserrat";
 }
 
@@ -10,10 +11,157 @@
     background-color: var(--background);
   }
 
-.open{
-    
-}
+  #content > h1 {
+    color: var(--primary);
+    text-align: center;
+  }
+  
+  #content > p {
+    margin-top: 1ch;
+    color: var(--text-primary);
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .input-bar {
+    width: 25vw;
+    height: 8vh;
+    border: 2px solid #000;
+    border-radius: 2vw;
+    margin: 3vh 0 0 0;
+    opacity: 0.5;
+    transition: 200ms;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .input-bar > label {
+    position: absolute;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    top: 2vh;
+    left: 3vw;
+    transition: 200ms;
+  }
+  
+  .input-bar > input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    padding: 20px 45px 10px;
+    font-size: 1.2rem;
+  }
+  
+  .input-bar > box-icon {
+    position: absolute;
+    width: 26px;
+    top: 17px;
+    left: 10px;
+  }
+  
+  .focus {
+    opacity: 1;
+  }
+  
+  .focus > label {
+    top: 2px;
+    font-size: 12px;
+  }
+  
+  #btn {
+    width: 25vw;
+    border: none;
+    padding: 15px;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 3vh;
+    background-size: 300% 100%;
+    background-image: linear-gradient(
+      to right,
+      var(--primary-gradient-1),
+      var(--primary-gradient-2),
+      var(--primary-gradient-2),
+      var(--primary-gradient-1)
+    );
+    -o-transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+  }
+  
+  #btn:hover {
+    background-position: 100% 0;
+    -o-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .login-trouble {
+    padding-left: 1.8vw;
+    font-weight: 500;
+    margin-top: 1vh;
+  }
+  
+  .or-sign-in {
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+  }
+  
+  .or-sign-in span {
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0 1ch 0 1ch;
+  }
+  
+  .or-sign-in::after,
+  .or-sign-in::before {
+    width: 2vw;
+    background-color: black;
+    height: 0.2vh;
+    content: "";
+  }
+  
+  #sign-in-with-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    border: 2px solid grey;
+    color: var(--text-primary);
+    background-color: transparent;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 1vh;
+  }
+  
+  #sign-in-with-google:hover {
+    border: 2px solid #000;
+    background-color: var(--background);
+  }
+  
+  .play-on-hover {
+    padding-right: 1ch;
+    height: 8vh;
+    width: 8vh;
+    background-image: url(../../assets/google-logo.jpg);
+    background-size: cover;
+  }
+  
+  #sign-in-with-google:hover .play-on-hover {
+    background-image: url(../../assets/google_logo.gif);
+  }
 
-.closed{
+  
+  .closed{
     visibility: hidden;
-}   
+  }

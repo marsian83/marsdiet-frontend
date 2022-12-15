@@ -5,8 +5,8 @@ const Signup = (props) => {
   return (
     <div className={props.current === "signup" ? "open" : "closed"}>
       <div id="content">
-        <h1>MarsDiet Sign In</h1>
-        <p>Hey, Enter your details to get sign in to your account.</p>
+        <h1>MarsDiet Sign Up</h1>
+        <p>Welcome! Fill all details correctly so that we can better understand you.</p>
         <div>
           <div className="input-bar">
             <label htmlFor="name">username</label>
@@ -33,7 +33,7 @@ const Signup = (props) => {
         </div>
         <button id="sign-in-with-google">
           <div className="play-on-hover" />
-          Sign in with Google
+          Continue with Google
         </button>
       </div>
     </div>

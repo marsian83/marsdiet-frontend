@@ -4,7 +4,7 @@ import "./Login.scoped.css";
 import "../../assets/google_logo.gif";
 
 const Login = (props) => {
-  
+
   //Login card js
   const inputAnimation = () => {
     const input = document.querySelectorAll(".input");
@@ -57,7 +57,7 @@ const Login = (props) => {
         </div>
         <button id="sign-in-with-google">
           <div className="play-on-hover" />
-          Sign in with Google
+          Continue with Google
         </button>
       </div>
     </div>
