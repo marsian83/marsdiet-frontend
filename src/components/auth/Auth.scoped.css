@@ -11,6 +11,36 @@
   overflow: hidden;
 }
 
+.back-button {
+  position: fixed;
+  top: 3vh;
+  left: 2vw;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: 300ms ease-in;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+  color: var(--primary);
+}
+
+.back-button p {
+  margin: 0;
+  margin-left: 0.5ch;
+  transition: 300ms ease-in;
+  transition-property: margin;
+}
+
+.back-button:hover p {
+  margin-left: 1ch;
+}
+
 .transition-cover {
   position: fixed;
   top: 0;
@@ -19,8 +49,16 @@
   height: 100vh;
   background-color: var(--background);
   /* display: none; */
-  animation: fadeout 2000ms;
   z-index: -100;
+}
+
+.fade-out {
+  animation: fadeout 1000ms;
+}
+
+.fade-in {
+  animation: fadein 300ms;
+  z-index: 100;
 }
 
 @keyframes fadeout {
@@ -31,6 +69,19 @@
   }
   to {
     opacity: 0;
+    display: flex;
+    z-index: 100;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    display: flex;
+    z-index: 100;
+  }
+  to {
+    opacity: 1;
     display: flex;
     z-index: 100;
   }

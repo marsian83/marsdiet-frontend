@@ -8,6 +8,7 @@ import LandingPageTop from "./LandingPageTop";
 const LandingPage = () => {
   return (
     <>
+      <div className="transition-cover" />
       <Navbar />
       <LandingPageTop />
       <LandingPageBody />

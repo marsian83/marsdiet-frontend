@@ -35,8 +35,8 @@ body {
 @keyframes navbar-fix-animation {
   0% {
     background-color: transparent;
-    padding-bottom: 6vh;
-    margin-bottom: -4vh;
+    padding-bottom: 8vh;
+    margin-bottom: -6vh;
   }
   60% {
     background-color: var(--background);
