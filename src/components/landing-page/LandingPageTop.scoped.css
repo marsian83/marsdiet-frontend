@@ -1,16 +1,21 @@
-.container {
+* {
   font-family: "Montserrat";
+}
+
+.container {
   display: flex;
   flex-direction: row;
   padding-left: var(--page-padding-left);
   padding-right: var(--page-padding-right);
   background-color: #fff4ff;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .container-left {
   width: 50%;
-  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container-left-heading {
