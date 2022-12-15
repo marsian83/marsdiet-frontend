@@ -32,7 +32,7 @@
   border-radius: 2vw;
   margin: 3vh 0 0 0;
   opacity: 0.5;
-  transition: 200ms;
+  /* transition: 200ms; */
   font-weight: 600;
   position: relative;
 }
@@ -43,7 +43,7 @@
   text-transform: capitalize;
   top: 2vh;
   left: 3vw;
-  transition: 200ms;
+  /* transition: 200ms; */
 }
 
 .input-bar > input {
@@ -90,17 +90,17 @@
     var(--primary-gradient-2),
     var(--primary-gradient-1)
   );
-  -o-transition: all 200ms ease-in-out;
+  /* -o-transition: all 200ms ease-in-out;
   -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out; */
   cursor: pointer;
 }
 
 #btn:hover {
   background-position: 100% 0;
-  -o-transition: all 300ms ease-in-out;
+  /* -o-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; */
 }
 
 .login-trouble {
@@ -164,5 +164,25 @@
 }
 
 .closed{
-  visibility: hidden;
+  /* visibility: hidden; */
+  animation: close-animation 2000ms ease-in-out;
+}
+
+.closed #content{
+  animation: content-close-animation 2000ms ease-in-out;
+}
+
+@keyframes content-close-animation {
+  0%{
+    height: auto;
+    width: auto;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+  
+  100%{
+    height: 2vh;
+    width: 2vh;
+    border-radius: 100%;
+  }
 }

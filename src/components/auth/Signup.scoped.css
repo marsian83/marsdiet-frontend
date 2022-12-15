@@ -4,12 +4,12 @@
 }
 
 #content {
-    width: 25vw;
-    padding: 3vw;
-    box-shadow: 0 11px 17px 5px rgb(0 0 0 / 33%);
-    border-radius: 5vh;
-    background-color: var(--background);
-  }
+  width: 25vw;
+  padding: 3vw;
+  box-shadow: 0 11px 17px 5px rgb(0 0 0 / 33%);
+  border-radius: 5vh;
+  background-color: var(--background);
+}
 
   #content > h1 {
     color: var(--primary);

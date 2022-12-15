@@ -12,14 +12,8 @@ const Auth = () => {
     <>
       <GradientElement current={current} />
       <div className="auth-container">
-        <Login
-          setCurrent={setCurrent}
-          current={current}
-        />
-        <Signup
-          setCurrent={setCurrent}
-          current={current}
-        />
+        <Login setCurrent={setCurrent} current={current} />
+        <Signup setCurrent={setCurrent} current={current} />
       </div>
     </>
   );
