@@ -1,7 +1,7 @@
 import React from "react";
 import "./GradientElement.scoped.css";
-import KUTE from "kute.js";
-import { useEffect } from "react";
+// import KUTE from "kute.js";
+// import { useEffect } from "react";
 
 export const GradientElement = (props) => {
   // var tween = KUTE.fromTo(
