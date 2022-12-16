@@ -86,7 +86,9 @@ export const LandingPageBody = () => {
       </motion.div>
       <div className="how-it-works-container">
         <h4>HOW IT WORKS</h4>
-        <div className="how-it-works" />
+        <div className="how-it-works" >
+          ok
+          </div>
       </div>
     </div>
   );
