@@ -13,6 +13,7 @@ import {
   signOut,
 } from "@firebase/auth";
 import { GoogleAuthProvider, signInWithPopup } from "@firebase/auth";
+import axios from 'axios'
 
 const AuthContext = createContext();
 
@@ -24,7 +25,8 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
   const signup = async (email, password) => {
-    await createUserWithEmailAndPassword(auth, email, password);
+    const {user} = await createUserWithEmailAndPassword(auth, email, password);
+    axios.post(`/user/new/${user.uid}`)
   };
 
   const login = (email, password) => {
