@@ -1,12 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
 import "./Login.scoped.css";
-import authWaves from "../../assets/auth-waves.svg";
-import "../../assets/google_logo.gif";
 import { useState } from "react";
 import { useRef } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router";
+import authWaves from "../../assets/auth-waves.svg";
+import "../../assets/google_logo.gif";
 
 const Login = (props) => {
   const { login, googleSignin } = useAuth();
@@ -47,25 +46,6 @@ const Login = (props) => {
     setLoading(false);
   };
 
-  const inputAnimation = () => {
-    const input = document.querySelectorAll(".input");
-    function inputFocus() {
-      this.parentNode.classList.add("focus");
-    }
-    function inputBlur() {
-      if (this.value === "" || this.value === null) {
-        this.parentNode.classList.remove("focus");
-      }
-    }
-    input.forEach((e) => {
-      e.addEventListener("focus", inputFocus);
-      e.addEventListener("blur", inputBlur);
-    });
-  };
-
-  useEffect(() => {
-    inputAnimation();
-  });
 
   return (
     <div
