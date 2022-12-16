@@ -12,6 +12,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/auth" element={<Auth />} />
+            <Route exact path="/dashboard" element={<Dashboard />}/>
           </Routes>
         </AuthProvider>
       </Router>
