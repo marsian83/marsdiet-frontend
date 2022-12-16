@@ -11,7 +11,7 @@ export const Dashboard = () => {
     if (!currentUser) {
       navigate("/");
     }
-  },[currentUser]);
+  }, [currentUser, navigate]);
 
   return (
     <div>

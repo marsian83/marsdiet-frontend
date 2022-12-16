@@ -1,8 +1,6 @@
-import LandingPage from "./components/landing-page/LandingPage";
 import Auth from "./components/auth/Auth";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
-import { Dashboard } from "./components/dashboard/Dashboard";
 import { Home } from "./components/Home";
 
 function App() {

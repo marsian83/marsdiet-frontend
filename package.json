@@ -47,7 +47,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://marsdiet-api.cyclic.app",
+  "proxy": "https://127.0.0.1:8000",
   "devDependencies": {
     "craco": "^0.0.3"
   }
