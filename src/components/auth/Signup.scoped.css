@@ -286,10 +286,8 @@
 }
 
 .error-input .input {
-  color: red;
   animation: error-shake 100ms;
   animation-iteration-count: 4;
-  font-weight: 600;
 }
 
 .error-input label{

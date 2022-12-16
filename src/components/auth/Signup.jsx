@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import authWaves from "../../assets/auth-waves.svg";
+import { useEffect } from "react";
 
 const validateEmail = (email) => {
   return String(email)
@@ -84,11 +85,18 @@ const Signup = (props) => {
       await signup(emailRef.current.value, passwordRef.current.value);
       navigate("/");
     } catch (err) {
-      //catch any errors and set to signup type
+      //catch any other errors and set to signup type
       setError({
         type: "signup",
-        message: err.message.replace("Firebase:", ""),
+        message: err.message.replace("Firebase: ", ""),
       });
+      //ERROR: email is already in use
+      if (err.message.includes("email-already-in-use")) {
+        setError({
+          type: "email",
+          message: "An account with that email already exists",
+        });
+      }
     }
 
     setLoading(false); //to re-activate buttons
@@ -107,13 +115,26 @@ const Signup = (props) => {
     } catch (err) {
       //catch any errors and set to signup type
       setError({
-        type: "signup",
-        message: err.message.replace("Firebase:", ""),
+        type: "login",
+        message: err.message.replace("Firebase: ", ""),
       });
+      //if user closes the signin popup
+      if (err.message.includes("popup-closed-by-user")) {
+        setError({
+          type: "login",
+          message: "Signin popup was abruptly closed, please try again",
+        });
+      }
     }
 
     setLoading(false); //to re-activate buttons
   };
+
+  //useEffect hooks
+  useEffect(() => {
+    //Alert for any errors with signup type
+    error.type === "signup" && alert(error.message);
+  }, [error]);
 
   return (
     <div className={props.current === "signup" ? "open" : "closed"}>
