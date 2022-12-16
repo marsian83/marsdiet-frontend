@@ -20,6 +20,11 @@ const topCardVariants = {
 };
 
 export const LandingPageBody = () => {
+  
+  //Other Hooks
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
   // useEffect Hook
   useEffect(() => {
     if (inView) {
@@ -28,10 +33,6 @@ export const LandingPageBody = () => {
       control.start("hidden");
     }
   }, [control, inView]);
-
-  //Other Hooks
-  const control = useAnimation();
-  const [ref, inView] = useInView();
 
   return (
     <div className="body">
