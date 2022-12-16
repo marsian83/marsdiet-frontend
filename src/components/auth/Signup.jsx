@@ -10,7 +10,7 @@ const Signup = (props) => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
-  const { signup,googleSignin } = useAuth();
+  const { signup, googleSignin } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -18,7 +18,10 @@ const Signup = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (passwordRef.current.value !== confirmPasswordRef.current.value) {
-      return setError("passwords do not match");
+      return setError({
+        type: "confirmPassword",
+        message: "Passwords do not match",
+      });
     }
     try {
       setError("");
@@ -81,6 +84,9 @@ const Signup = (props) => {
               name="confirm-password"
               ref={confirmPasswordRef}
             />
+            <div className="confirm-password-error">
+              Some random Garbage happened on the server
+            </div>
             <box-icon name="lock-alt" />
           </div>
           <p
@@ -99,7 +105,11 @@ const Signup = (props) => {
           <span>Or</span>
         </div>
         <button id="sign-in-with-google">
-          <div className="play-on-hover" onClick={handleGoogleSignin} disabled={loading}/>
+          <div
+            className="play-on-hover"
+            onClick={handleGoogleSignin}
+            disabled={loading}
+          />
           Continue with Google
         </button>
       </div>
