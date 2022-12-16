@@ -143,6 +143,7 @@
 }
 
 .how-it-works{
+  position: relative;
   min-height: 100%;
   min-width: 100%;
   display: flex;
@@ -151,16 +152,34 @@
 }
 
 .how-it-works-grid{
-  min-height: 80vh;
+  min-height: 100vh;
   min-width: 80%;
   background-image: linear-gradient(#ff781f .1em, transparent .1em), linear-gradient(90deg, #ff781f .1em, transparent .1em);
   background-size: 6em 6em;
   opacity: 0.4;
+  z-index: -1;
 }
 
 .how-it-works-fade{
+<<<<<<< HEAD
   min-height: 80vh;
   min-width: 80%;
   background-image:linear-gradient(to bottom, transparent var(--background));
+=======
+  position: absolute;
+  height: 100vh;
+  width: 80%;
+  background-image: -webkit-linear-gradient(left, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.2) 80%,
+    rgba(255, 255, 255, 0.9) 100%
+  ), -webkit-linear-gradient(top,
+  rgba(255, 255, 255, 1) 0%, 
+  rgba(255, 255, 255, 0.2) 20%,
+  rgba(255, 255, 255, 0.2) 80%,
+  rgba(255, 255, 255, 0.9) 100%
+  )
+>>>>>>> a67e1205db5efd08eaa3d2f61a8a3b37b8daec8a
 }
 
