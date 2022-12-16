@@ -12,19 +12,39 @@ const Auth = () => {
   const [current, setCurrent] = useState("login");
 
   const pageTransition = (page) => {
-    setCurrent("hidden")
+    setCurrent("hidden");
     setTimeout(() => {
       navigate(page);
     }, 300);
   };
 
   const navigate = useNavigate();
-  const {currentUser} = useAuth()
+  const { currentUser } = useAuth();
 
   useEffect(() => {
     if (currentUser) {
       navigate("/");
     }
+  });
+
+  const inputAnimation = () => {
+    const input = document.querySelectorAll(".input");
+    function inputFocus() {
+      this.parentNode.classList.add("focus");
+    }
+    function inputBlur() {
+      if (this.value === "" || this.value === null) {
+        this.parentNode.classList.remove("focus");
+      }
+    }
+    input.forEach((e) => {
+      e.addEventListener("focus", inputFocus);
+      e.addEventListener("blur", inputBlur);
+    });
+  };
+
+  useEffect(() => {
+    inputAnimation();
   });
 
   return (
