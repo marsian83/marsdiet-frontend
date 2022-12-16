@@ -161,6 +161,6 @@
 .how-it-works-fade{
   min-height: 80vh;
   min-width: 80%;
-  background-image:linear-gradient(bottom to, transparent var(--background));
+  background-image:linear-gradient(to bottom, transparent var(--background));
 }
 

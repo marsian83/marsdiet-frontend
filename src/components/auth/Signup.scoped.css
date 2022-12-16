@@ -285,11 +285,29 @@
   }
 }
 
-
-.confirm-password-error{
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 8vh;
+.error-input .input {
+  color: red;
+  animation: error-shake 100ms;
+  animation-iteration-count: 4;
+  font-weight: 600;
 }
+
+.error-input label{
+  color: red;
+}
+
+@keyframes error-shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+

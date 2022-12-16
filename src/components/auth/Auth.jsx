@@ -10,7 +10,6 @@ import { useAuth } from "../../contexts/AuthContext";
 
 const Auth = () => {
   const [current, setCurrent] = useState("login");
-  const [transition, setTransition] = useState("fade-out");
 
   const pageTransition = (page) => {
     setCurrent("hidden")
@@ -30,7 +29,7 @@ const Auth = () => {
 
   return (
     <>
-      <div className={`transition-cover ${transition}`} />
+      <div className={`transition-cover fade-out`} />
       <button
         className={`back-button ${current}`}
         onClick={() => {
