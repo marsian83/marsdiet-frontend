@@ -1,21 +1,27 @@
 import React from "react";
 import "./LandingPageTop.scoped.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // eslint-disable-next-line
 import { TypeAnimation } from "react-type-animation";
-// import 'font-awesome/css/font-awesome.min.css';
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const LandingPageTop = () => {
-  const [authTransition, setAuthTransition] = useState(false);
 
+  //useState Hooks
+  const [authTransition, setAuthTransition] = useState(false);
+  //other Hooks
   const navigate = useNavigate();
+
+  // Function to go to Authorisation page
   const goToAuth = () => {
     setAuthTransition(true);
     setTimeout(() => {
       navigate("/auth");
     }, 300);
   };
+
   return (
     <div className="container">
       <div
@@ -48,35 +54,37 @@ const LandingPageTop = () => {
         />
 
         <div className="animated-area">
-          <div className="animated-text-area">
-            {
-              // eslint-disable-next-line
-              <TypeAnimation
-                sequence={[
-                  "Tell us what you ate",
-                  5000,
-                  "I ate 3 slices of white-bread",
-                  1500,
-                  "2 Glasses of milk",
-                  2000,
-                  "I had a chicken leg",
-                  1000,
-                  "or just upload a picture!",
-                  3000,
-                  `Leave the rest to us`,
-                  1500,
-                  `We'll track your calories`,
-                  1500,
-                  "and Nutrients!",
-                  1000,
-                ]}
-                wrapper="div"
-                cursor={true}
-                repeat={Infinity}
-                style={{ fontSize: "2.2em", opacity: "80%" }}
-              />
-            }
-          </div>
+          {
+            // eslint-disable-next-line
+            <TypeAnimation
+              sequence={[
+                "Tell us what you ate",
+                5000,
+                "I ate 3 slices of white-bread",
+                1500,
+                "2 Glasses of milk",
+                2000,
+                "I had a chicken leg",
+                1000,
+                "or just upload a picture!",
+                3000,
+                `Leave the rest to us`,
+                1500,
+                `We'll track your calories`,
+                1500,
+                "and Nutrients!",
+                1000,
+              ]}
+              wrapper="div"
+              cursor={true}
+              repeat={Infinity}
+              style={{ fontSize: "2.2em", opacity: "80%" }}
+            />
+          }
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            className="animated-text-area-search"
+          />
         </div>
       </div>
     </div>

@@ -160,34 +160,28 @@
   margin-top: -10vh;
 }
 
-.animated-text-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  font-weight: 400;
-  background-color: #ffffff;
-  border-radius: 2ch;
+.animated-text-area-search{
+  position: absolute;
+  font-size: 2rem;
+  right: 0;
+  margin-right: 2rem;
+  color: var(--primary);
+}
+
+.animated-area {
+  position: relative;
+  z-index: 2;
   width: 45vw;
   height: 10vh;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  position: relative;
-}
-
-.animated-area {
+  background-color: #ffffff;
+  border-radius: 10ch;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   margin-top: -10vh;
   align-items: center;
-}
-
-.animated-area button {
-  height: 8vh;
-  background-color: var(--primary);
-  border-radius: 10ch;
-  border: none;
-  font-size: 2ch;
 }
 
 .transition-cover {
