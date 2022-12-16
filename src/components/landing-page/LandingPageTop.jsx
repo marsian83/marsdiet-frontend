@@ -1,22 +1,27 @@
 import React from "react";
 import "./LandingPageTop.scoped.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // eslint-disable-next-line
 import { TypeAnimation } from "react-type-animation";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const LandingPageTop = () => {
-  const [authTransition, setAuthTransition] = useState(false);
 
+  //useState Hooks
+  const [authTransition, setAuthTransition] = useState(false);
+  //other Hooks
   const navigate = useNavigate();
+
+  // Function to go to Authorisation page
   const goToAuth = () => {
     setAuthTransition(true);
     setTimeout(() => {
       navigate("/auth");
     }, 300);
   };
+
   return (
     <div className="container">
       <div
