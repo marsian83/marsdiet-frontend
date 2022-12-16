@@ -87,10 +87,9 @@ export const LandingPageBody = () => {
       <div className="how-it-works-container">
         <h4>HOW IT WORKS</h4>
         <div className="how-it-works" >
-          <div className="how-it-works-grid">
             <div className="how-it-works-fade">
-              
             </div>
+          <div className="how-it-works-grid">
           </div>
           </div>
       </div>
