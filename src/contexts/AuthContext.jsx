@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
-import { auth} from "../firebase";
+import { auth } from "../firebase";
 import {
   onAuthStateChanged,
   createUserWithEmailAndPassword,
@@ -13,7 +13,7 @@ import {
   signOut,
 } from "@firebase/auth";
 import { GoogleAuthProvider, signInWithPopup } from "@firebase/auth";
-import axios from 'axios'
+import axios from "axios";
 
 const AuthContext = createContext();
 
@@ -25,8 +25,12 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
   const signup = async (email, password) => {
-    const {user} = await createUserWithEmailAndPassword(auth, email, password);
-    axios.post(`/user/new/${user.uid}`)
+    const { user } = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    axios.post(`/user/new/${user.uid}`);
   };
 
   const login = (email, password) => {
@@ -51,8 +55,8 @@ export const AuthProvider = ({ children }) => {
 
   const googleSignin = async () => {
     const provider = new GoogleAuthProvider();
-    const results = await signInWithPopup(auth, provider);
-    console.log(results)
+    const { user } = await signInWithPopup(auth, provider);
+    axios.post(`/user/new/${user.uid}`);
   };
 
   useEffect(() => {

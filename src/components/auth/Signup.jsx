@@ -213,8 +213,12 @@ const Signup = (props) => {
         <div className="or-sign-in">
           <span>Or</span>
         </div>
-        <button id="sign-in-with-google" disabled={loading}>
-          <div className="play-on-hover" onClick={handleGoogleSignin} />
+        <button
+          id="sign-in-with-google"
+          disabled={loading}
+          onClick={handleGoogleSignin}
+        >
+          <div className="play-on-hover" />
           Continue with Google
         </button>
       </div>
