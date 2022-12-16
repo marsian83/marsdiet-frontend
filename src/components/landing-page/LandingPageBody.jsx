@@ -1,9 +1,10 @@
 import React from "react";
 import "./LandingPageBody.scoped.css";
-import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
+//framer motion variants decalration for cards' scroll animation
 const topCardVariants = {
   visible: {
     opacity: 1,
@@ -19,9 +20,7 @@ const topCardVariants = {
 };
 
 export const LandingPageBody = () => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
+  // useEffect Hook
   useEffect(() => {
     if (inView) {
       control.start("visible");
@@ -29,6 +28,10 @@ export const LandingPageBody = () => {
       control.start("hidden");
     }
   }, [control, inView]);
+
+  //Other Hooks
+  const control = useAnimation();
+  const [ref, inView] = useInView();
 
   return (
     <div className="body">
@@ -86,12 +89,10 @@ export const LandingPageBody = () => {
       </motion.div>
       <div className="how-it-works-container">
         <h4>HOW IT WORKS</h4>
-        <div className="how-it-works" >
-            <div className="how-it-works-fade">
-            </div>
-          <div className="how-it-works-grid">
-          </div>
-          </div>
+        <div className="how-it-works">
+          <div className="how-it-works-fade" />
+          <div className="how-it-works-grid" />
+        </div>
       </div>
     </div>
   );
