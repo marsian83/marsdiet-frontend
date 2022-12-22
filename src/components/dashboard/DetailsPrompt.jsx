@@ -3,14 +3,13 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
-import { useNavigate } from "react-router";
 import { useAuth } from "../../contexts/AuthContext";
 import Modal from "../Modal";
-
+import "./DetailsPrompt.scoped.css"
 const DetailsPrompt = () => {
   const { currentUser, logout } = useAuth();
   const [incompleteData, setIncompleteData] = useState(false);
-  const navigate = useNavigate();
+  const [error, setError] = useState({ type: null, message: "" });
   const name = useRef();
   const age = useRef();
   const height = useRef();
@@ -22,7 +21,43 @@ const DetailsPrompt = () => {
     return data;
   };
 
+  const clearError = () => {
+    setError({ type: null, message: "" });
+  };
+
+
+
   const updateData = async () => {
+    clearError();
+    await new Promise((r) => setTimeout(r, 1));
+    if (!(name.current.value && age.current.value && gender.current.value && height.current.value && weight.current)) {
+      return setError({
+        type: "Update",
+        message: "Please fill out all the fields",
+      });
+    }
+
+    if (isNaN(age.current.value)){
+      return setError({
+        type: "Update",
+        message: "Age should be a number"
+      })
+    }
+
+    if (isNaN(height.current.value)){
+      return setError({
+        type: "Update",
+        message: "Height should be a number"
+      })
+    }
+
+    if (isNaN(weight.current.value)){
+      return setError({
+        type: "Update",
+        message: "Weight should be a number"
+      })
+    }
+
     await axios.put(`/user/info/set/${currentUser.uid}`, {
       name: name.current.value,
       age: age.current.value,
@@ -37,11 +72,6 @@ const DetailsPrompt = () => {
     getLatestData();
   }, [updateData]);
 
-  useEffect(() => {
-    if (!currentUser) {
-      navigate("/");
-    }
-  }, [currentUser, navigate]);
 
   //functions
   const getLatestData = async () => {
@@ -61,6 +91,8 @@ const DetailsPrompt = () => {
   return (
     <div>
       <Modal visible={incompleteData} setVisible={incompleteData} fixed={true}>
+        <div className="modal-heading">Complete Your Profile</div>
+        <div className="error-display">{error.message}</div>
         <input placeholder="Name" ref={name} />
         <input placeholder="Age" ref={age} />
         <input placeholder="Gender" ref={gender} />

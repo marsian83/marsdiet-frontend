@@ -1,19 +1,29 @@
 import React from "react";
+import { useEffect } from "react";
 import "./DashBoard.scoped.css";
 import { useAuth } from "../../contexts/AuthContext";
 import DetailsPrompt from "./DetailsPrompt";
+import { useNavigate } from "react-router";
 
 
 export const Dashboard = () => {
   
-  const { logout } = useAuth();
+  const { currentUser, logout } = useAuth();
+  const navigate = useNavigate();
+
+  
+  useEffect(() => {
+    if (!currentUser) {
+      navigate("/");
+    }
+  }, [currentUser, navigate]);
 
   return (
 
     <div>
       <DetailsPrompt />
       
-      {/* <button
+      <button
         onClick={() => {
           logout();
           navigate("/");
@@ -21,9 +31,6 @@ export const Dashboard = () => {
       >
         Logout
       </button>
-      <div className="user-profile">
-
-      </div> */}
     </div>
   );
 };
