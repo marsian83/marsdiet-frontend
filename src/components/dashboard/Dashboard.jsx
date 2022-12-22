@@ -1,22 +1,19 @@
 import React from "react";
-import { useEffect } from "react";
-import { useNavigate } from "react-router";
+import "./DashBoard.scoped.css";
 import { useAuth } from "../../contexts/AuthContext";
+import DetailsPrompt from "./DetailsPrompt";
+
 
 export const Dashboard = () => {
-  const { currentUser, logout } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!currentUser) {
-      navigate("/");
-    }
-  }, [currentUser, navigate]);
+  
+  const { logout } = useAuth();
 
   return (
+
     <div>
-      {JSON.stringify(currentUser)}
-      <button
+      <DetailsPrompt />
+      
+      {/* <button
         onClick={() => {
           logout();
           navigate("/");
@@ -24,6 +21,9 @@ export const Dashboard = () => {
       >
         Logout
       </button>
+      <div className="user-profile">
+
+      </div> */}
     </div>
   );
 };

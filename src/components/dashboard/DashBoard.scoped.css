@@ -1,0 +1,5 @@
+.dashboard-container{
+    padding-right: var(--page-padding-right);
+    padding-left: var(--page-padding-left);
+}
+
