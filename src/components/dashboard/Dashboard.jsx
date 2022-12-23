@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
 import "./DashBoard.scoped.css";
 import DetailsPrompt from "./DetailsPrompt";
