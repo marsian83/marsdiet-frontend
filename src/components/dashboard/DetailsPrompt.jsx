@@ -6,8 +6,8 @@ import { useRef } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import Modal from "../Modal";
 import "./DetailsPrompt.scoped.css"
-const DetailsPrompt = () => {
-  const { currentUser, logout } = useAuth();
+const DetailsPrompt = (props) => {
+  const { currentUser} = useAuth();
   const [incompleteData, setIncompleteData] = useState(false);
   const [error, setError] = useState({ type: null, message: "" });
   const name = useRef();
@@ -58,13 +58,14 @@ const DetailsPrompt = () => {
       })
     }
 
-    await axios.put(`/user/info/set/${currentUser.uid}`, {
+   const {data} =  await axios.put(`/user/info/set/${currentUser.uid}`, {
       name: name.current.value,
       age: age.current.value,
       gender: gender.current.value,
       height: height.current.value,
       weight: weight.current.value,
     });
+    props.setUserData(data)
     getLatestData()
   };
 

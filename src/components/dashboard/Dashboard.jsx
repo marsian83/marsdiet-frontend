@@ -1,36 +1,25 @@
 import React from "react";
 import { useEffect } from "react";
+import { useState } from "react";
 import "./DashBoard.scoped.css";
-import { useAuth } from "../../contexts/AuthContext";
 import DetailsPrompt from "./DetailsPrompt";
-import { useNavigate } from "react-router";
-
+import UserProfile from "./UserProfile";
 
 export const Dashboard = () => {
   
-  const { currentUser, logout } = useAuth();
-  const navigate = useNavigate();
-
-  
-  useEffect(() => {
-    if (!currentUser) {
-      navigate("/");
-    }
-  }, [currentUser, navigate]);
-
+const [userData, setUserData] = useState({});
   return (
-
-    <div>
-      <DetailsPrompt />
-      
-      <button
-        onClick={() => {
-          logout();
-          navigate("/");
-        }}
-      >
-        Logout
-      </button>
-    </div>
+    <>
+      <DetailsPrompt setUserData={setUserData}/>
+      <div className="dashboard-container">
+        <div className="container-left">
+          <UserProfile userData={userData} setUserData={setUserData}/>
+        </div>
+        <div className="container-right">
+          <div className="container-calorie">Calorie de be</div>
+          <div className="container-water">paani pee be</div>
+        </div>
+      </div>
+    </>
   );
 };
