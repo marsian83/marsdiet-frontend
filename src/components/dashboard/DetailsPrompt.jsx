@@ -71,7 +71,7 @@ const DetailsPrompt = (props) => {
 
   useEffect(() => {
     getLatestData();
-  }, [updateData]);
+  }, []);
 
 
   //functions
